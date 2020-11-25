@@ -1,0 +1,53 @@
+.vc_custom_1496301826119 
+{
+    margin-top: -28px !important;
+}
+
+.vc_custom_1496655872595 
+{
+margin-top: -10px !important;
+}
+
+.vc_custom_1496301834343 {
+margin-bottom: -70px !important;
+}
+
+footer#footer.bg-dark
+{
+background-color: #282b2e !important;
+}
+        
+#header-mobile .module-logo img
+{
+width:88px;
+}
+        
+#header-mobile .module-logo img
+{
+height:96px;
+}
+        
+.page-title.bg-light
+{
+background-color:#81d742;
+}
+	        
+.page-title.bg-light h1,
+.page-title.bg-light h4
+{
+color:#ffffff;
+}
+	        
+#footer img.ft2
+{
+width:88px;
+}
+    
+#footer img.ft2
+{
+height:99px;
+}
+.woocommerce form .form-row .required 
+{
+visibility: visible;
+}
