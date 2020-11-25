@@ -1,0 +1,481 @@
+<head>
+    <title>Profile | News Roll </title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/theme-beige.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetiempicker.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/default-style.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/js_composer.min.css" type="text/css">
+    <link rel="stylesheet" href="css/rs6.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style(1).css" type="text/css">
+    <link rel="stylesheet" href="css/style(2).css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/vendors-style.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-layout.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-smallscreen.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce.css" type="text/css">
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #Jload {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: #fff url('images/Load.gif') no-repeat center center;
+        }
+
+        .blue_box,
+        .green_box,
+        .form_box {
+            display: table-cell;
+            border-radius: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .form_box span {
+            background-color: rgb(230 243 243);
+            color: rgb(10, 10, 10);
+            border: 4px rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 790px;
+            font-size: 14;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .blue_box span {
+            background-color: rgb(34, 34, 34);
+            color: white;
+            padding: 10px 10px;
+            display: block;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .green_box span {
+            background-color: rgb(255, 252, 207);
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 150px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+
+<script>
+    function deleteU() {
+        console.log("/<%= person._id %>")
+        if (confirm("Please Recheck \nAre you Sure to delete your account ?")) { document.location = '/api/profile/delete/<%= person._id %>' } else { console.log("KYA BKCHODI") }
+
+    }
+
+    function Man() {
+        const x = document.getElementById("Manage");
+        const y = document.getElementById("Profile");
+        y.innerText = ""
+        x.style.visibility = "visible"
+    }
+    function JUpload() {
+        console.log("Jai Mata Di ")
+        const formData = new FormData();
+        const Z = document.querySelector('input[type="file"]');
+        formData.append('Jimage', Z.files[0]);
+        formData.enctype = "multipart/form-data";
+
+
+        fetch('/api/profile/upload/<%= person._id %>', {
+            method: 'POST',
+            body: formData
+        }).then(response => {
+            return response.json()
+            // response.json()
+        })
+            .then(result => {
+                if (result == "FAILED") {
+                    if (confirm('Image Cant be Updated')) document.location = '/<%= person._id %>';
+                }
+                var PP = document.getElementById("profilepic");
+                PP.value = result
+                console.log('Success:', result)
+            })
+            .catch(error => {
+                if (confirm('Image Cant be Updated')) document.location = '/<%= person._id %>';
+                console.log('Error:', error);
+            });
+    }
+</script>
+
+
+<div id="Jload"></div>
+<div id="Jcontent">
+    <%-include('HeaderPage') %>
+
+    <body id="Image">
+        <br>
+        <div id="content">
+            <div class="page-title bg-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 push-lg-4">
+                            <h1 class="mb-0">Profile</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-content ">
+
+                <div id="primary" class="content-area">
+                    <main id="main" class="site-main">
+
+                        <!-- Page Content -->
+                        <div class="page-content ">
+
+                            <div class="container clearfix">
+                                <div class="main fullw ">
+
+                                    <article id="post-154" class="post-154 page type-page status-publish hentry">
+                                        <div class="entry-content">
+                                            <div class="vc_row wpb_row vc_row-fluid">
+                                                <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                    <div class="vc_column-inner">
+                                                        <div class="wpb_wrapper">
+                                                            <div class="page-content">
+                                                                <div class="container">
+                                                                    <div class="row">
+                                                                        <div class="row no-gutters">
+                                                                            <div class="col-md-3">
+                                                                                <!-- Menu Navigation -->
+                                                                                <nav id="menu-navigation"
+                                                                                    class="stick-to-content"
+                                                                                    data-local-scroll="">
+                                                                                    <ul style="text-align: center;"
+                                                                                        class="nav nav-menu bg-dark dark">
+
+                                                                                        <li><a style="color: azure;"
+                                                                                                href="/<%= person._id %>">Profile</a>
+                                                                                        </li>
+                                                                                        <li><a onclick="deleteU()"
+                                                                                                href="#"
+                                                                                                style="color: azure;">DELETE</a>
+                                                                                        </li>
+                                                                                        <%if (person.usertype =="Vendor") { %>
+                                                                                        <li><a onclick="Man()" href="#"
+                                                                                                style="color: azure;">Manage
+                                                                                                Newspapers</a>
+                                                                                        </li>
+                                                                                        <%}%>
+                                                                                        <%if (person.usertype =="Delivery Person") { %>
+                                                                                        <li><a href="#"
+                                                                                                style="color: azure">Delivery
+                                                                                                Details</a>
+                                                                                        </li>
+                                                                                        <%}%>
+                                                                                        <%if (person.usertype =="Customer") { %>
+                                                                                        <li><a href="#"
+                                                                                                style="color: azure;">Subscriptions</a>
+                                                                                        </li>
+                                                                                        <%}%>
+
+                                                                                    </ul>
+                                                                                </nav>
+                                                                            </div>
+                                                                            <div style="width: 900;" class="col-md-9">
+                                                                                <div id="Profile" style=" margin-bottom:0rem;" class="menu-category">
+
+                                                                                    <div style="margin-bottom:0rem;"
+                                                                                        class="menu-category-content padded">
+
+                                                                                        <!-- Menu Item -->
+                                                                                        <div style="font-size: 20px; "
+                                                                                            class="menu-item menu-grid-item">
+                                                                                            <div class="row gutters-sm">
+                                                                                                <div
+                                                                                                    class="col-lg-4 col-6">
+                                                                                                    <form method="POST"
+                                                                                                        action="api/profile/update/<%= person._id %>">
+                                                                                        <img height="190" width="190"
+                                                                                            style="border-radius: 50%;"
+                                                                                            src="data:<%=person.profilepic.contentType%>;base64, 
+                                                                                                                <%= person.profilepic.data.data.toString('base64') %>"><br><br><br>
+
+
+                                                                                        <div class="green_box">
+                                                                                            <span>Name
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.name %></span>
+                                                                                        </div>
+
+                                                                                        <br>
+
+                                                                                        <div class="green_box">
+                                                                                            <span>Username
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.username %></span>
+                                                                                        </div><br>
+
+                                                                                        <div class="green_box">
+                                                                                            <span>Email
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.email %></span>
+                                                                                        </div><br>
+
+                                                                                        <div class="green_box">
+                                                                                            <span>Mobile
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.mobile %></span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <label
+                                                                                                class="sr-only">Change
+                                                                                                Mobile-No.</label>
+                                                                                            <input type="text"
+                                                                                                style="border-radius: 25px;padding: 10px;"
+                                                                                                name="user[mobile]"
+                                                                                                id=" areacode"
+                                                                                                placeholder="Change Mobile-No.">
+                                                                                        </div><br>
+
+                                                                                        <div class="green_box">
+                                                                                            <span>AreaCode
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.areacode %></span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <label
+                                                                                                class="sr-only">Change
+                                                                                                Area
+                                                                                                Code</label>
+                                                                                            <input type=" text"
+                                                                                                style="border-radius: 25px;padding: 10px;"
+                                                                                                name="user[areacode]"
+                                                                                                id=" areacode"
+                                                                                                placeholder="Change Area Code">
+                                                                                        </div>
+                                                                                        <br>
+
+
+
+                                                                                        <div class="green_box">
+                                                                                            <span>Address
+                                                                                                :
+                                                                                            </span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <span><%= person.address %></span>
+                                                                                        </div>
+                                                                                        <div class="blue_box">
+                                                                                            <label
+                                                                                                class="sr-only">Change
+                                                                                                Address
+                                                                                            </label>
+                                                                                            <input type=" text"
+                                                                                                style="border-radius: 25px;padding: 10px;"
+                                                                                                name="user[address]"
+                                                                                                id=" areacode"
+                                                                                                placeholder="Change Address">
+                                                                                        </div><br>
+
+                                                                                        <button
+                                                                                            style="color: rgb(10, 0, 0);
+                                                                                                        padding: 15px 32px;
+                                                                                                        text-align: center;
+                                                                                                        text-decoration: none;
+                                                                                                        display: inline-block;
+                                                                                                        font-size: 16px;"
+                                                                                            id="myBtn"
+                                                                                            type="submit">Update</button>
+                                                                                        </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                            <!-- ///// -->
+
+                                                            <div style="visibility: hidden; margin-bottom:0rem;"
+                                                                id="Manage" class="menu-category">
+
+                                                                <div class="menu-category-content padded">
+
+                                                                    <!-- Menu Item -->
+                                                                    <div style="font-size: 20px; "
+                                                                        class="menu-item menu-grid-item">
+                                                                        <h1> Manage Newspapers
+                                                                        </h1>
+                                                                        <div class="row gutters-sm">
+                                                                            <%if (NewsPap != null){%>
+                                                                            <%for (var i in NewsPap.Newspapers){%>
+                                                                            <form class="form_box" method="POST"
+                                                                                action="/api/profile/News/<%= person._id %>/<%= NewsPap.Newspapers[i]._id %>">
+                                                                                <span>
+                                                                                    <div class="row">
+                                                                                        <div class="column">
+                                                                                            <img height="120"
+                                                                                                width="120" alt="Logo"
+                                                                                                class="center"
+                                                                                                src="data:<%=NewsPap.Newspapers[i].Image.contentType%>;base64,<%= NewsPap.Newspapers[i].Image.data.data.toString('base64') %>">
+
+                                                                                            <label
+                                                                                                class="center sr-only">
+                                                                                                Image
+                                                                                            </label>
+                                                                                            <input class="center"
+                                                                                                onchange="JUpload();"
+                                                                                                name="Jimage"
+                                                                                                id="Jimage"
+                                                                                                placeholder="Image"
+                                                                                                style="margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                                                                                                type="file">
+                                                                                        </div>
+
+                                                                                        <div class="column">
+                                                                                            <br><label for="title">
+                                                                                                Title :
+                                                                                            </label>
+                                                                                            <input name="title"
+                                                                                                id="title"
+                                                                                                value="<%= NewsPap.Newspapers[i].Title %>"
+                                                                                                style=" margin-left: 8; margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                                                                                                type="text">
+
+                                                                                            <br><label for="price">
+                                                                                                Price :
+                                                                                            </label>
+                                                                                            <input name="price"
+                                                                                                id="price"
+                                                                                                value="<%= NewsPap.Newspapers[i].Price %>"
+                                                                                                style=" margin-left: 8; margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                                                                                                type="text">
+
+                                                                                            <br><label for="areacode">
+                                                                                                AreaCode :
+                                                                                            </label>
+                                                                                            <input name="areacode"
+                                                                                                id="areacode"
+                                                                                                value="<%= NewsPap.Newspapers[i].Areacode %>"
+                                                                                                style="margin-left:5;width:170; margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                                                                                                type="text">
+
+                                                                                            <br><label for="language">
+                                                                                                Language :
+                                                                                            </label>
+                                                                                            <input name="language"
+                                                                                                id="language"
+                                                                                                value="<%= NewsPap.Newspapers[i].Language %>"
+                                                                                                style=" margin-left: 5.7;width: 170;margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                                                                                                type="text">
+
+                                                                                            <label class='sr-only'>
+                                                                                                imagename</label>
+                                                                                            <input type="profilepic"
+                                                                                                style='visibility: hidden; max-width: 96%; margin-left: 15px;'
+                                                                                                class=' form-control'
+                                                                                                name='imagename'
+                                                                                                id='profilepic'
+                                                                                                value='No Change'>
+
+
+                                                                                            <div class="centre">
+
+                                                                                                <button
+                                                                                                    style="color: rgb(10, 0, 0);padding: 8px 8px; text-align: center;text-decoration: none; font-size: 12px;margin-left: 50px;"
+                                                                                                    id="myBtn"
+                                                                                                    type="submit">Update</button>
+                                                                            </form>
+                                                                            <a style="background-color: #d85e56;color: white;border-radius:10px;text-align: center;padding: 8px 8px;font-size: 12px;"
+                                                                                id="myBtn"
+                                                                                href="/api/profile/Delete/<%= person._id %>/<%= NewsPap.Newspapers[i]._id %>">Delete</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    </span>
+                                                                    <% }%><% }%>
+                                                                    <form class="center"
+                                                                        action="/api/profile/News/<%= person._id %>/00"
+                                                                        method="post">
+                                                                        <button class="btn btn-sm ptom center"
+                                                                            data-target="#productModal" data-pid="229"
+                                                                            data-toggle="modal">Add
+                                                                            More
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+</div>
+
+
+<!-- .entry-content -->
+
+</article><!-- #post-## -->
+</div>
+</body>
+</div>
+</div>
+<%-include('footer')%>
+
+</div>
+<script src="LoadP2.js">
+
+</script>

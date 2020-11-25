@@ -1,0 +1,263 @@
+<head>
+    <title>Offers | News Roll </title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/theme-beige.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetiempicker.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/default-style.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/js_composer.min.css" type="text/css">
+    <link rel="stylesheet" href="css/rs6.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style(1).css" type="text/css">
+    <link rel="stylesheet" href="css/style(2).css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/vendors-style.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-layout.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-smallscreen.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce.css" type="text/css">
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #Jload {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: #fff url('images/Load.gif') no-repeat center center;
+        }
+
+        .blue_box,
+        .green_box,
+        .form_box {
+            display: table-cell;
+            border-radius: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .form_box span {
+            background-color: rgb(230 243 243);
+            color: rgb(10, 10, 10);
+            border: 4px rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 790px;
+            font-size: 14;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .blue_box span {
+            background-color: rgb(34, 34, 34);
+            color: white;
+            padding: 10px 10px;
+            display: block;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .green_box span {
+            background-color: rgb(255, 252, 207);
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 150px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+<script src="Load.js"></script>
+
+<div id="Jload"></div>
+<div id="Jcontent">
+    <%- include('HeaderPage') %>
+    <!-- Content -->
+    <div id="content" style="margin-left:12rem;">
+
+
+        <div style=" padding-bottom: 1rem" class="page-title bg-light">
+            <div class="container">
+                <div class="row">
+                    <div style="left: 12%; text-align: center;" class="col-lg-8 push-lg-4">
+                        <br><br>
+                        <h1 class="mb-0">All Offers</h1>
+                        <h4 class="text-muted mb-0">Start Your Subscription Today</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="site-content ">
+
+            <div id="primary" class="content-area">
+                <main id="main" class="site-main">
+
+                    <!-- Page Content -->
+                    <div class="page-content ">
+
+                        <div class="container clearfix">
+                            <div class="main fullw ">
+
+                                <article id="post-154" class="post-154 page type-page status-publish hentry">
+                                    <div class="entry-content">
+                                        <div class="vc_row wpb_row vc_row-fluid">
+                                            <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                <div class="vc_column-inner">
+                                                    <div class="wpb_wrapper">
+                                                        <div class="page-content">
+                                                            <div class="container">
+                                                                <div class="row">
+                                                                    <div style="width: 900;" class="row no-gutters">
+
+                                                                        <div style=" max-width: 100%;flex-basis: 100%;"
+                                                                            class="col-md-10">
+
+                                                                            <div id="burgers" class="menu-category">
+                                                                                <div class="menu-category-title">
+                                                                                    <div class="bg-image"
+                                                                                        style="background-image: url(images/Video_Back.jpg);">
+
+                                                                                    </div>
+                                                                                    <h2 class="title">Newspapers</h2>
+                                                                                    <h4 class="text-muted mb-0">Start
+                                                                                        Your Subscription Today</h4>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="menu-category-content padded">
+                                                                                    <div class="row gutters-sm">
+
+                                                                                        <%for (var i in offers){%>
+                                                                                        <%for (var j in offers[i].Newspapers){%>
+                                                                                        <% if (offers[i].Newspapers[j].Title != null ){%>
+                                                                                        <div style="max-width: 30%;flex-basis: 100%;"
+                                                                                            class="col-lg-4 col-6">
+                                                                                            <!-- Menu Item -->
+                                                                                            <div
+                                                                                                class="menu-item menu-grid-item">
+                                                                                                <a href="/" class="mb-4
+                                                                                                    wp-post-image"
+                                                                                                    alt=""
+                                                                                                    loading="lazy">
+
+                                                                                                    <img width="270"
+                                                                                                        height="270"
+                                                                                                        src="data:<%=offers[i].Newspapers[j].Image.contentType%>;base64,<%= offers[i].Newspapers[j].Image.data.data.toString('base64') %>">
+                                                                                                </a>
+
+                                                                                                <h6 class="mb-0"><a
+                                                                                                        href="http://themebeer.com/wp/soup/product/beef-burger/">
+                                                                                                        <%= offers[i].Newspapers[j].Title %></a>
+                                                                                                </h6>
+                                                                                                <span
+                                                                                                    class="text-muted text-sm">
+                                                                                                    <p><%= offers[i].Newspapers[j].Language %>
+                                                                                                    </p>
+                                                                                                </span>
+                                                                                                <div
+                                                                                                    class="row align-items-center mt-4">
+                                                                                                    <div
+                                                                                                        class="col-sm-6">
+                                                                                                        <span
+                                                                                                            class="text-md mr-4">from
+                                                                                                            <span
+                                                                                                                class="woocommerce-Price-amount amount"><bdi><span
+                                                                                                                        class="woocommerce-Price-currencySymbol">₹</span><%= offers[i].Newspapers[j].Price %></bdi></span></span>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="col-sm-6 text-sm-right mt-2 mt-sm-0 popup">
+                                                                                                        <button
+                                                                                                            onclick="addtocart('<%= offers[i].Newspapers[j].Title %>',<%= offers[i].Newspapers[j].Price %>)"
+                                                                                                            class="btn btn-outline-secondary btn-sm ptom">
+                                                                                                            <span>Add to
+                                                                                                                cart</span></button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <%}%><%}%><%}%>
+
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <%-include('footer')%>
+                                                                                    </div>
+                                                                                    <script>
+                                                                                        var CART = []
+                                                                                        var Value = []
+                                                                                        var TI = 0
+                                                                                        var TV = 0
+                                                                                        function Cook() {
+                                                                                            TI = CART.length;
+                                                                                            // console.log(CART)
+                                                                                            // console.log(Value)
+                                                                                            // console.log("Items : ", TI)
+                                                                                            // console.log("Price : ", TV)
+                                                                                            var C = JSON.stringify(CART);
+                                                                                            document.cookie = 'CART = ' + C;
+                                                                                            var P = JSON.stringify(Value);
+                                                                                            document.cookie = 'Value = ' + P;
+                                                                                            var x = document.cookie;
+                                                                                            console.log(x)
+                                                                                            document.cookie = 'TI = ' + TI;
+                                                                                            document.cookie = 'TV = ' + TV;
+                                                                                            CartCook();
+                                                                                            // createCookie('TI', TI);
+                                                                                            // createCookie('TV', TV);
+
+                                                                                        }
+                                                                                        function addtocart(N, P) {
+                                                                                            CART.push(N)
+                                                                                            Value.push(P)
+                                                                                            TV += P
+                                                                                            // console.log(N, "  ", P)
+                                                                                            Cook();
+                                                                                        }
+                                                                                    </script>

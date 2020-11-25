@@ -1,0 +1,110 @@
+<head>
+    <title>Offers | News Roll </title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/theme-beige.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetiempicker.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/default-style.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/js_composer.min.css" type="text/css">
+    <link rel="stylesheet" href="css/rs6.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style(1).css" type="text/css">
+    <link rel="stylesheet" href="css/style(2).css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/vendors-style.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-layout.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-smallscreen.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce.css" type="text/css">
+    <style>
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #Jload {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: #fff url('images/Load.gif') no-repeat center center;
+        }
+
+        .blue_box,
+        .green_box,
+        .form_box {
+            display: table-cell;
+            border-radius: 10px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        .form_box span {
+            background-color: rgb(230 243 243);
+            color: rgb(10, 10, 10);
+            border: 4px rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 790px;
+            font-size: 14;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .blue_box span {
+            background-color: rgb(34, 34, 34);
+            color: white;
+            padding: 10px 10px;
+            display: block;
+            width: 250px;
+            border-radius: 20px;
+        }
+
+        .green_box span {
+            background-color: rgb(255, 252, 207);
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: block;
+            width: 150px;
+            border-radius: 20px;
+
+        }
+    </style>
+</head>
+<script src="Load.js"></script>
+
+<div id="Jload"></div>
+<div id="Jcontent">
+    <%- include('HeaderPage') %>
+    <!-- Content -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <h class="center" style="font-size: 56px;font-weight: 500;">Service Not In Business</h>
+    <img class="center" src="images/Closed.gif">
+
+    <%-include('footer')%>
+</div>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <title>News Roll – Online Newspaper Delivery System </title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/themify-icons.css" type="text/css">
+    <link rel="dns-prefetch" href="http://maps.googleapis.com/">
+    <link rel="dns-prefetch" href="http://s.w.org/">
+    <link rel="stylesheet" href="css/theme-beige.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="css/animsition.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-datetiempicker.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/default-style.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/js_composer.min.css" type="text/css">
+    <link rel="stylesheet" href="css/rs6.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/style(1).css" type="text/css">
+    <link rel="stylesheet" href="css/style(2).css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/vendors-style.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-layout.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce-smallscreen.css" type="text/css">
+    <link rel="stylesheet" href="css/woocommerce.css" type="text/css">
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+        #Jload {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9999;
+            background: #fff url('images/Load.gif') no-repeat center center;
+        }
+    </style>
+</head>
+
+<div id="Jload"></div>
+<div id="Jcontent">
+
+    <%-include('HeaderPage') %>
+
+    <body>
+
+        <!-- <>  -->
+        <!-- Content -->
+        <div id="content">
+            <section class="section section-main section-main-1 bg-light">
+                <div class="container dark">
+                    <div class="slide-container">
+                        <div id="section-main-1-carousel-image"
+                            class="image inner-controls slick-initialized slick-slider slick-dotted" role="toolbar">
+                            <div aria-live="polite" class="slick-list draggable">
+                                <div class="slick-track" style="opacity: 1; width: 5475px;" role="listbox">
+                                    <div class="slide slick-slide slick-current slick-active" style="width: 1298px;">
+
+                                        <video autoplay loop muted playsinline>
+                                            <source src="Videos/Deliver.mp4" type="video/mp4" />
+                                        </video>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content dark">
+                            <div id="section-main-1-carousel-content" class="slick-initialized slick-slider">
+
+                                <div aria-live="polite" class="slick-list draggable">
+                                    <div class="slick-track" style="opacity: 1; width: 2495px;" role="listbox">
+                                        <div class="content-inner slick-slide slick-current slick-active"
+                                            data-slick-index="1" aria-hidden="false" style="width: 529px;" role="option"
+                                            aria-describedby="slick-slide31">
+
+
+                                            <h1>Get Your Favorite Newspaper</h1>
+                                            <h5 class="text-muted mb-5">At your doorstep</h5>
+                                            <a href="/-100" class="btn btn-outline-primary btn-lg"><span>Subscribe
+                                                    now!</span></a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+        <%-include('Middle')%>
+        <%-include('footer')%>
+    </body>
+
+</div>
+
+<script src="Load.js"></script>
+
+
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Login | News Roll</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/custom.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/StyleLogin.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+    <form action='/api/auth/login' method="POST" class="form-signin">
+        <!-- <img class="mb-4" src="../public/images/logo-light.png" alt="" width="72" height="72"> -->
+        <a href="/"><img src="images/logo-light.png" alt="Logo" width="90" height="90"></a><br><br>
+        <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name='email' id="inputEmail" class="form-control" placeholder="Email address" required
+            autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+        <a href="/Register" value="Register" style="color: azure;">Register</a>
+        <button onclick="Login()" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <br>
+        <p id="demo"></p>
+        <p>&copy; News Roll 2020</p>
+    </form>
+</body>
+
+</html>

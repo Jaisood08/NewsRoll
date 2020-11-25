@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <style>
+        .blue_box h {
+            background-color: #282b2e;
+            border-left: 5px solid rgb(0, 0, 0);
+            color: white;
+            padding: 10px 10px;
+            width: 146px;
+            max-width: 100%;
+            display: inline-block;
+        }
+
+        .blue_box p {
+            background-color: #f7f7f7;
+            color: rgb(0, 0, 0);
+            padding: 10px 10px;
+            display: inline-block;
+            width: 90px;
+            margin-left: 12px;
+            font-weight: 600;
+        }
+
+        .Bottem_box h {
+            background-color: #282b2e;
+            border-left: 5px solid rgb(0, 0, 0);
+            color: white;
+            padding: 5px 5px;
+            width: 146px;
+            max-width: 100%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<div id="body-wrapper" class="animsition" style="animation-duration: 800ms; opacity: 1;">
+    <!-- Header -->
+    <header id="header" class="light ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <!-- Logo -->
+                    <div class="module module-logo dark">
+                        <a href="/"><img src="images/logo-light.svg" alt="Logo"></a>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <!-- Navigation -->
+                    <nav class="module module-navigation left mr-4">
+                        <ul id="nav-main" class="nav nav-main">
+                            <li id="menu-item-346"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275">
+                                <a href="/">Home </a>
+                            </li>
+                            <li id="menu-item-32"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275">
+                                <a href="/AboutUs">About </a>
+                            </li>
+
+                            <li id="menu-item-275"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a
+                                    href="/-100">Offers</a></li>
+                            <li id="menu-item-276"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a
+                                    href="/Contact">Contact</a></li>
+                            <li id="menu-item-36"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275">
+                                <a href="/">More </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-2">
+                    <a onclick=" PanelCartOpen()" class="module module-cart right" data-toggle="panel-cart">
+                        <div class="minc"><span class="cart-icon"><i class="ti ti-shopping-cart"></i><span id="Jcart"
+                                    class="notification">0</span></span>
+                            <span class="cart-value" style="border-left: 1px solid #e0e0e0;">
+                                <span class="woocommerce-Price-amount amount">
+                                    <bdi><span id="Jprice" class="woocommerce-Price-currencySymbol">₹ 0.00</bdi> </span>
+                            </span>
+                            </span>
+                        </div>
+                    </a>
+
+                    <div class="module module-cart right" data-toggle="panel-cart">
+                        <span class="cart-value">
+                            <div class="ProState">
+                                <a style="margin-left: 50px;border-right: 2px solid #e0e0e0" href="/Login">
+                                    Login
+                                </a>
+                                <a style="margin-left:2px; " href="/Register">
+                                    Signup
+                                </a>
+                            </div>
+                            <div class="Jcart-value">
+                            </div>
+
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+
+    </header>
+    <!-- Header -->
+    <header id="header-mobile" class="light">
+
+        <div class="module module-nav-toggle">
+            <a href="/" id="nav-toggle"
+                data-toggle="panel-mobile"><span></span><span></span><span></span><span></span></a>
+        </div>
+
+        <div class="module module-logo">
+            <a href="/">
+                <img src="images/logo-light.svg" alt="Logo">
+            </a>
+        </div>
+
+        <div class="module module-cart">
+            <a href="#" onclick="PanelCart()" data-toggle="panel-cart">
+                <i class="ti ti-shopping-cart"></i>
+                <span class="notification">0</span>
+            </a>
+        </div>
+        <div class="module module-cart right" data-toggle="panel-cart">
+            <span class="cart-value">
+                <br>
+                <a href="/Login">
+                    Login | Signup
+                </a>
+            </span>
+        </div>
+
+    </header>
+</div>
+<!-- Header / End -->
+
+
+<!-- Panel Cart -->
+<div id="panel-cart" class="show">
+    <div class="panel-cart-container">
+        <div class="panel-cart-title">
+            <h5 class="title">Your Cart</h5>
+            <button href="#" id="" onclick="PanelCartClose()" class="close" data-toggle="panel-cart">
+                <i class="ti ti-close"></i></button>
+        </div>
+
+        <div class="panel-cart-content minc-list">
+            <div class="row" style="max-height: 22rem; overflow: scroll;">
+                <form action="/" class="sp-mincart" method="post">
+                    <table class="table-cart min">
+                    </table>
+                    <div class="blue_box">
+                        <div style="font-size: 15px;" class="cart-summary ">
+                            <h>No Item Selected</h><br>
+                            <h>Price :</h>
+                            <i style="margin-left: 35px;" class="ti ti-close"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div class="Bottem_box">
+                    <div style="font-size: 14px;" class="cart-summary ">
+                        <h id="JTI">Total Item : </h><br>
+                        <h id="JTV">Total Price : ₹</h><br>
+                        <h id="JTD">Subscription Time : </h>
+                        <h id="JTTT">Subscription Cost : </h><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="/cart" class="panel-cart-action btn btn-secondary btn-block btn-lg"><span>Start Subscription</span></a>
+</div>
+
+
+<script>
+    var VN = []
+    var CN = []
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function CartCook() {
+
+        var TI = getCookie("TI")
+        var TV = getCookie("TV")
+
+
+        if (TI != "" && TV != "") {
+            var I = document.getElementById("Jcart").innerHTML = TI;
+            var P = document.getElementById("Jprice").innerHTML = "₹ " + TV;
+        }
+
+        if (TI >= 0) {
+            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+            ];
+
+            var d1 = new Date();
+            d1 = (d1.getDate()).toString() + " " + monthNames[d1.getMonth()];
+            var d2 = new Date();
+            d2.setDate(d2.getDate() + 28);
+            d2 = (d2.getDate()).toString() + " " + monthNames[d2.getMonth()];
+            console.log(d1)
+            console.log(d2)
+
+            const JTI = document.getElementById("JTI").innerText = "Total Item : " + TI
+            const JTV = document.getElementById("JTV").innerText = "Total Price : ₹  " + TV
+            const JTD = document.getElementById("JTD").innerText = "Subscription Date : " + d1 + " - " + d2;
+            var JTTT = document.getElementById("JTTT").innerText = "Subscription Cost : " + TV * 28 + " ₹ ";
+
+
+
+            VN = getCookie("Value")
+            CN = getCookie("CART")
+
+            VN = VN.replace("[", "")
+            VN = VN.replace("]", "")
+            CN = CN.replace("[", "")
+            CN = CN.replace("]", "")
+            VN = VN.split(",");
+            CN = CN.split(",");
+
+            const Panel = document.querySelector(".cart-summary")
+            Panel.innerHTML = ""
+            for (var i = 0; i < CN.length; i++) {
+                var Tit = document.createElement("h")
+                Tit.id = i
+                CN[i] = CN[i].replace('"', "")
+                CN[i] = CN[i].replace('"', "")
+                Tit.innerText = CN[i]
+                var Pri = document.createElement("p")
+                VN[i] = VN[i].replace('"', "")
+                VN[i] = VN[i].replace('"', "")
+                Pri.innerText = " Price : ₹ " + VN[i]
+                var l = document.createElement("hr")
+                var Y = document.createElement("i")
+                Y.setAttribute("class", "ti ti-close");
+                Y.setAttribute("style", "margin-left: 35px;");
+                Y.setAttribute("onclick", "DeleteCart(" + i + ")");
+                Panel.appendChild(Tit)
+                Panel.appendChild(Pri)
+                Panel.appendChild(Y)
+                Panel.appendChild(l)
+            }
+        }
+    }
+
+    function DeleteCart(index) {
+        console.log(index)
+        console.log(CN)
+        var TI = parseInt(getCookie("TI"), 10)
+        if (TI > 0) {
+            TI = parseInt(getCookie("TI"), 10) - 1;
+            var TV = parseInt(getCookie("TV"), 10);
+            var sub = parseInt(VN[index], 10);
+            TV = TV - sub;
+            VN.splice(index, 1)
+            CN.splice(index, 1)
+            console.log(VN)
+            document.cookie = 'CART = ' + CN;
+            document.cookie = 'Value = ' + VN;
+            document.cookie = 'TI = ' + TI;
+            document.cookie = 'TV = ' + TV;
+            CartCook()
+        }
+    }
+
+    var x = document.getElementById("panel-cart");
+    function PanelCartOpen() {
+        x.style.visibility = "visible";
+    }
+    function PanelCartClose() {
+        x.style.visibility = "hidden";
+    }
+    window.onload = CartCook();
+</script>
+
+
+</html>

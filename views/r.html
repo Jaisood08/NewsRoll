@@ -1,0 +1,58 @@
+<form class="form_box" method="POST" action="/api/profile/News/<%= person._id %>/<%= NewsPap.Newspapers[i]._id %>">
+    <span>
+        <div class="row">
+            <div class="column">
+                <img height="120" width="120" alt="Logo" class="center"
+                    src="data:<%=NewsPap.Newspapers[i].Image.contentType%>;base64,<%= NewsPap.Newspapers[i].Image.data.data.toString('base64') %>">
+
+                <label class="center sr-only">
+                    Image
+                </label>
+                <input class="center" onchange="JUpload();" name="Jimage" id="Jimage" placeholder="Image"
+                    style="margin-bottom: 4px; border-radius: 25px;padding: 10px;" type="file">
+            </div>
+
+            <div class="column">
+                <br><label for="title">
+                    Title :
+                </label>
+                <input name="title" id="title" placeholder="<%= NewsPap.Newspapers[i].Title %>"
+                    style=" margin-left: 8; margin-bottom: 4px; border-radius: 25px;padding: 10px;" type="text">
+
+                <br><label for="price">
+                    Price :
+                </label>
+                <input name="price" id="price" placeholder="<%= NewsPap.Newspapers[i].Price %>"
+                    style=" margin-left: 8; margin-bottom: 4px; border-radius: 25px;padding: 10px;" type="text">
+
+                <br><label for="areacode">
+                    AreaCode :
+                </label>
+                <input name="areacode" id="areacode" placeholder="<%= NewsPap.Newspapers[i].Areacode %>"
+                    style="margin-left:5;width:170; margin-bottom: 4px; border-radius: 25px;padding: 10px;" type="text">
+
+                <br><label for="language">
+                    Language :
+                </label>
+                <input name="language" id="language" placeholder="<%= NewsPap.Newspapers[i].Language %>"
+                    style=" margin-left: 5.7;width: 170;margin-bottom: 4px; border-radius: 25px;padding: 10px;"
+                    type="text">
+
+                <label class='sr-only'>
+                    imagename</label>
+                <input type="profilepic" style='visibility: hidden; max-width: 96%; margin-left: 15px;'
+                    class=' form-control' name='imagename' id='profilepic' placeholder='Please enter the Pass Key'>
+
+
+                <div class="centre">
+
+                    <button
+                        style="color: rgb(10, 0, 0);padding: 8px 8px; text-align: center;text-decoration: none; font-size: 12px;margin-left: 50px;"
+                        id="myBtn" type="submit">Update</button>
+                    <button
+                        style="color: rgb(10, 0, 0);padding: 8px 8px; text-align: center;text-decoration: none; font-size: 12px;"
+                        id="myBtn" type="submit">Delete</button>
+                </div>
+            </div>
+    </span>
+</form>

@@ -1,0 +1,151 @@
+<div class="site-content ">
+
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main">
+            <!-- Page Content -->
+            <div class="page-content" style="padding-bottom: 0;padding-top: 0;"">
+            <!-- <div class=" page-content" style="padding-bottom: 0;padding-top: 0;padding-left: 1rem;
+    padding-right: 2rem;"> -->
+
+                <div class=" clearfix">
+                    <div class="main left ">
+
+                        <article id="post-281" style="margin-bottom: 0;"
+                            class="post-281 page type-page status-publish hentry">
+                            <div class="entry-content">
+                                <div class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner vc_custom_1496301826119">
+                                            <div class="wpb_wrapper">
+                                                <section class="section section-bg-edge">
+                                                    <div class="image right col-md-6 push-md-6">
+                                                        <div class="bg-image"
+                                                            style="background-image: url(images/Main_Mid.jpg);">
+                                                            <img src="../public/images/main_front.jpg"
+                                                                alt="Review Image" style="display: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="container">
+                                                        <div class="col-lg-5 col-md-9  rtlcss">
+
+                                                            <h1>Online Newspaper Delivery System</h1>
+                                                            <p class="lead text-muted mb-5">
+                                                                A platform where you can subscribe to your
+                                                                Favorite Newspaper any time and can manage your
+                                                                Subscription at any time.
+                                                            </p>
+                                                            <div class="blockquotes hom1">
+
+                                                                <blockquote style="border-left:.25rem solid #707273;"
+                                                                    class="blockquote light animated fadeInLeft visible"
+                                                                    data-animation="fadeInLeft">
+                                                                    <div class="blockquote-content">
+                                                                        <p> Check For The Availability In your Area </p>
+                                                                    </div>
+
+                                                                    <label style="font-size: 1.7rem;">Enter your
+                                                                        Area Code</label>
+                                                                    <input maxlength="6"
+                                                                        style="max-width: 70%;font-size: 1.5rem; "
+                                                                        id="pinoffer" class="form-control"
+                                                                        placeholder="AreaCode" required>
+                                                                    <button onclick="offersde()"
+                                                                        class="btn btn-outline-primary btn-lg">Check</button>
+                                                                    <br>
+
+
+                                                                </blockquote>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row vc_row-fluid">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <section class="section section-extended right dark">
+                                                    <div class="container bg-dark">
+                                                        <div class="row">
+
+                                                            <div class="col-md-4">
+                                                                <!-- Step -->
+                                                                <div class="feature feature-1 mb-md-0">
+                                                                    <div class="feature-icon icon icon-primary">
+                                                                        <i class="ti ti-shopping-cart"></i>
+                                                                    </div>
+                                                                    <div class="feature-content">
+                                                                        <h4 class="mb-2"><a href="/">Choose a
+                                                                                Newspaper</a></h4>
+                                                                        <p class="text-muted mb-0">As per the
+                                                                            availability of newspapers in your area </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <!-- Step -->
+                                                                <div class="feature feature-1 mb-md-0">
+                                                                    <div class="feature-icon icon icon-primary">
+                                                                        <i class="ti ti-credit-card"></i></div>
+                                                                    <div class="feature-content">
+                                                                        <h4 class="mb-2"><a href="/">Make
+                                                                                A Subscription</a></h4>
+                                                                        <p class="text-muted mb-0">After Selecting
+                                                                            newspapers you can start a Subscription </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-4">
+                                                                <!-- Step -->
+                                                                <div class="feature feature-1 mb-md-0">
+                                                                    <div class="feature-icon icon icon-primary">
+                                                                        <i class="ti ti-package"></i></div>
+                                                                    <div class="feature-content">
+                                                                        <h4 class="mb-2"><a href="/">Enjoy your
+                                                                                Subscription !</a></h4>
+                                                                        <p class="text-muted mb-0">You can also manage
+                                                                            your Subscription any time from this
+                                                                            website.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
+
+                                            </div><!-- .entry-content -->
+
+                        </article><!-- #post-## -->
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main><!-- #main -->
+    </div><!-- #primary -->
+
+
+</div><!-- #content -->
+<script>
+    function offersde() {
+        const pid = document.getElementById("pinoffer").value
+
+        console.log(pid)
+        if (pid) {
+            window.location.href = "/" + pid;
+        }
+        else {
+            window.location.href = "/-100";
+        }
+    }
+</script>
