@@ -1,5 +1,5 @@
 module.exports = {
-  mongoURL: "mongodb+srv://JayRoll:newsjay2020@newsroll.okzfz.mongodb.net/NewsRoll?retryWrites=true&w=majority",
+  mongoURL: "___--____--___",
   secret: "mystrongsecret"
 };
 
